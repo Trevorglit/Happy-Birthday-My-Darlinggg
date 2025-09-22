@@ -59,17 +59,17 @@
 
     .slides {
       display: flex;
-      width: 900%; /* 9 items total */
+      width: 900%; /* 9 items */
+      height: 100%; /* fill slideshow height */
       animation: slide 36s infinite;
     }
 
     .slides img,
     .slides video {
-      width: 100%;
-      height: 100%;
+      flex: 0 0 100%;   /* each takes full width */
+      height: 100%;     /* match slideshow height */
       object-fit: cover;
       border-radius: 20px;
-      flex-shrink: 0;
     }
 
     @keyframes slide {
