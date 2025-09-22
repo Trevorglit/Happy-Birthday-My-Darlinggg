@@ -20,15 +20,15 @@
 
     h1 {
       font-size: 3em;
-      color: #1e3a8a; /* Changed from white to blue */
-      text-shadow: 0 0 20px #93c5fd, 0 0 40px #3b82f6, 0 0 60px #1d4ed8; /* Updated to blue tones */
+      color: white;
+      text-shadow: 0 0 20px #ffb6c1, 0 0 40px #ff69b4, 0 0 60px #ff1493;
       animation: glow 2s infinite alternate;
       position: relative;
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 10px #60a5fa, 0 0 20px #93c5fd; }
-      to { text-shadow: 0 0 30px #1d4ed8, 0 0 60px #3b82f6; }
+      from { text-shadow: 0 0 10px #ff6ec7, 0 0 20px #ffb6c1; }
+      to { text-shadow: 0 0 30px #ff1493, 0 0 60px #ff69b4; }
     }
 
     h1::after {
@@ -45,33 +45,33 @@
     }
 
     /* Slideshow */
-    .slideshow {
-      width: 250px;
-      height: 250px;
-      margin: 20px auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
+   .slideshow {
+  width: 250PX;
+  height: 250PXvh; /* Half of the screen height */
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
 
-    .slides {
-      display: flex;
-      width: 250px;
-      height: 250px;
-      animation: slide 36s infinite;
-    }
+.slides {
+  display: flex;
+  width: 250PX;
+  height: 250PX;
+  animation: slide 36s infinite;
+}
 
-    .slides img,
-    .slides video {
-      flex: 0 0 100%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-    }
+.slides img,
+.slides video {
+  flex: 0 0 100%;
+  width: 50%;
+  height: 50%;
+  object-fit: cover; /* Ensures video/image covers the frame */
+  border-radius: 20px;
+}
 
-    @keyframes slide {
+       @keyframes slide {
       0% { transform: translateX(0%); }
       10% { transform: translateX(0%); }
       20% { transform: translateX(-100%); }
@@ -88,9 +88,9 @@
     /* Typewriter effect */
     .typewriter {
       font-size: 1.4em;
-      color: #1e3a8a; /* Changed from white to blue */
+      color: white;
       margin-top: 10px;
-      border-right: 2px solid #1e3a8a; /* Changed from white to blue */
+      border-right: 2px solid white;
       white-space: nowrap;
       overflow: hidden;
       width: 0;
@@ -104,7 +104,7 @@
 
     @keyframes blink {
       0%, 100% { border-color: transparent; }
-      50% { border-color: #1e3a8a; } /* Changed from white to blue */
+      50% { border-color: white; }
     }
 
     /* Button */
@@ -113,7 +113,7 @@
       padding: 15px 30px;
       font-size: 1.3em;
       color: white;
-      background: #2563eb; /* Changed to a blue shade */
+      background: #ff1493;
       border: none;
       border-radius: 50px;
       cursor: pointer;
@@ -159,25 +159,24 @@
   <h1>Happy Birthday, My Sweet Little Potato 💖</h1>
 
   <!-- Slideshow -->
-  <div class="slideshow">
-    <div class="slides">
-      <video src="images/pic1.mp4" autoplay muted loop playsinline></video>
-      <img src="images/pic2.jpg" alt="Memory 2">
-      <video src="images/pic3.mp4" autoplay muted loop playsinline></video>
-      <video src="images/pic4.mp4" autoplay muted loop playsinline></video>
-      <img src="images/pic5.jpg" alt="Memory 5">
-      <img src="images/pic6.jpg" alt="Memory 6">
-      <video src="images/pic7.mp4" autoplay muted loop playsinline></video>
-      <video src="images/pic8.mp4" autoplay muted loop playsinline></video>
-      <video src="images/pic9.mp4" autoplay muted loop playsinline></video>
-    </div>
+ <!-- Slideshow -->
+<div class="slideshow">
+  <div class="slides">
+    <video src="images/pic1.mp4" autoplay muted loop playsinline></video>
+    <img src="images/pic2.jpg" alt="Memory 2">
+    <video src="images/pic3.mp4" autoplay muted loop playsinline></video>
+    <video src="images/pic4.mp4" autoplay muted loop playsinline></video>
+    <img src="images/pic5.jpg" alt="Memory 5">
+    <img src="images/pic6.jpg" alt="Memory 6">
+    <video src="images/pic7.mp4" autoplay muted loop playsinline></video>
+    <video src="images/pic8.mp4" autoplay muted loop playsinline></video>
+    <video src="images/pic9.mp4" autoplay muted loop playsinline></video>
   </div>
+</div>
+
 
   <!-- Typewriter message -->
   <div class="typewriter">You are my sunshine, my best friend, and my forever love 💕</div>
-
-  <!-- Button -->
-  <a href="#" class="button">Click for a Surprise!</a>
 
   <!-- Background Music -->
   <audio autoplay loop>
@@ -211,14 +210,6 @@
       setTimeout(() => balloon.remove(), 8000);
     }
     setInterval(createBalloon, 1500);
-
-    // Button click event
-    document.querySelector('.button').addEventListener('click', function(e) {
-      e.preventDefault();
-      alert("I love you more than words can say! Happy Birthday my love! 💕");
-    });
   </script>
 </body>
 </html>
-
-
